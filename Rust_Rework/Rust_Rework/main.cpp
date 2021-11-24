@@ -5,9 +5,8 @@
 #include "Visuals.h"
 
 HWND hwnd = nullptr;
-HANDLE memoryRead = 0, memoryWrite = 0, memoryESPWrite = 0;
-HDC hdc;
 
+// Include Your Own driver (Read/Write Memory)
 
 int main()
 {
@@ -38,8 +37,6 @@ int main()
 	 if (!globals.World) return NULL;
 
 	 std::cout << "[WORLD] " << "0x" << std::hex << globals.World << std::endl;
-
-	// driver::Write<float>(globals.World + 0x28A8, 2.0f);
 
 	 setup_window();
 	 setup_directx(MyWnd);
